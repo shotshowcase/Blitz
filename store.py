@@ -1,12 +1,14 @@
 import streamlit as st
 
-def set_shopify_credentials(api_key, password_shopify, shop_name):
+def set_shopify_credentials(api_key, password_shopify, shop_name,shop_display_name):
     if 'shopifyCRED' not in st.session_state:
         st.session_state.shopifyCRED = {"shop_name": shop_name,
+                                        "shop_display_name": shop_display_name,
                                         "api_key": api_key,
                                         "password_shopify": password_shopify}
     else:
         st.session_state.shopifyCRED = {"shop_name": shop_name,
+                                        "shop_display_name": shop_display_name,
                                         "api_key": api_key,
                                         "password_shopify": password_shopify}
         
