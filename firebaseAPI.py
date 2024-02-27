@@ -32,7 +32,7 @@ def fetch_credentials_from_firebase(password):
     doc = doc_ref.get()
     if doc.exists:
         data = doc.to_dict()
-        set_shopify_credentials(data.get('API_KEY'),data.get('PASSWORD'),data.get('SHOP_NAME'))
+        set_shopify_credentials(data.get('API_KEY'),data.get('PASSWORD'),data.get('SHOP_NAME'),data.get('SHOP_DISPLAY_NAME'))
         set_shiprocket_credentials(data.get('email'),data.get('password'))
     else:
         raise ValueError("Invalid Password")
