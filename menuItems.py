@@ -30,7 +30,7 @@ def Menu(Display_list, result_df, Score, contact, Address, tax, invoice_url):
 
     address_confirmation_message = result_df.apply(
         lambda row: f"Hi {row['Name'].split()[0]},\n"
-                    "Thank you for your order! If you'd like to make any changes to your delivery address, "
+                    f"Thank you for your order of {row['Product']} from {st.session_state.shopifyCRED['shop_display_name']}! If you'd like to make any changes to your delivery address, "
                     "please let us know for a seamless delivery experience.\n\n"
                     f"*Your Current Delivery Address is*: {row['Complete Address']}\n\n"
                     "Looking forward to serving you soon!",
